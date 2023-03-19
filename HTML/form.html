@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Test Form</title>
+    <link rel="stylesheet" href="..\CSS\form-style.css"/>
+</head>
+<body>
+    <div id="box">
+        <form action="" id="lab-form">
+            <div class="half" id="form">
+                <h2>1. Your Contact Details</h2><br>
+                <input name="full-name" placeholder="Full Name" type="text" required>
+                <input name="patient-id" placeholder="Patient Id if exists" type="number"><br>
+                <input name="contact-number" placeholder="Contact Number" type="number" min="6000000000" max="9999999999" required>
+                <input name="email" placeholder="Email id" type="email" required><br>
+
+                <h2>2. Address</h2><br>
+                <input name="house-number" placeholder="H-No" type="number" required>
+                <input name="street" placeholder="Street" type="text" required><br>
+                <input name="area" placeholder="Area" type="text" required><br><br>
+
+                <label>District</label><br>
+                <!-- <input name="district" list="district" id="list">
+                    <datalist id="district">
+                        <option value="Choose" >
+                        <option value="Ranchi">
+                        <option value="Patna">
+                        <option value="Delhi">
+                        <option value="Mumbai">
+                        <option value="Bangalore">
+                        <option value="Pune">
+                    </datalist> -->
+                    <select name="district" id="list" required>
+                        <option value="choose" disabled selected>Choose</option>
+                        <option value="chennai">Chennai</option>
+                        <option value="patna">Patna</option>
+                        <option value="delhi">Delhi</option>
+                        <option value="mumbai">Mumbai</option>
+                        <option value="bangalore">Bangalore</option>
+                        <option value="pune">Pune</option>
+                      </select> <br><br>
+                <h2>3. Choose the Test Type</h2>
+                <p>Check atleast one box without fail</p>
+                <input type="checkbox" id="cbc" name="cbc" value="CBC">
+                <label for="cbc">CBC</label><br>
+                <input type="checkbox" id="complete-urine" name="complete-urine" value="Complete Urine">
+                <label for="complete-urine">Complete Urine</label><br>
+                <input type="checkbox" id="lipid-profile" name="lipid-profile" value="Lipid Profile">
+                <label for="lipid-profile">Lipid Profile</label><br>
+                <input type="checkbox" id="tsh" name="tsh" value="Thyroid Stimulating Hormone(TSH)">
+                <label for="tsh">Thyroid Stimulating Hormone (TSH)</label><br>
+                <input type="checkbox" id="glucose-test" name="glucose-test" value="Glucose Test">
+                <label for="glucose-test">Glucose Test</label>
+
+                <br><br><br>
+
+                <label>Do you want a hard copy of the report also?</label><br>
+                <input type="radio" id="yes" name="hardCopy" value="yes">
+                <label for="yes">Yes</label><br>
+                <input type="radio" id="no" name="hardCopy" value="no">
+                <label for="no">No</label>
+                
+                <br><br><br>
+
+                <label>Select Your Comfortable Date and Time</label><br>
+                <label>Date</label>
+                <input type="date" name="date" min='2023-03-30' required><br>
+                <label>Time</label>
+                <input type="time" name="time" step="3600" min="08:00" max="22:00" required/>
+            </div>
+            <div class="half" id="sticky-img">
+                <img src="..\Images\Images\Lab-Test\lab-test.jpg">
+            </div>
+        </form>
+    </div>
+    <div class="button">
+        <button form="lab-form" type="reset">Reset</button>
+        <button form="lab-form" type="submit">Submit</button>
+    </div>
+</body>
+</html>
